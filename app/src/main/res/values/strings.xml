@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">CCUM</string>
+    <string name="loginNow"><a href="">Sign in Now</a></string>
+    <string name="regisNow"><a href="">Sign up Now</a></string>
+    <string name="admin"><a href="">Admin</a></string>
+    <string name="back">Back</string>
+</resources>

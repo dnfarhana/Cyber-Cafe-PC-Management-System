@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".updateStatusA"
+    android:background="#996AED">
+    <TableLayout
+        android:layout_width="368dp"
+        android:layout_height="600dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.732">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/uspc1"
+                android:layout_width="195dp"
+                android:layout_height="142dp"
+                android:src="@drawable/pc1"
+                tools:layout_editor_absoluteX="80dp"
+                tools:layout_editor_absoluteY="596dp" />
+
+            <ImageView
+                android:id="@+id/uspc2"
+                android:layout_width="195dp"
+                android:layout_height="142dp"
+                android:src="@drawable/pc2"
+                tools:layout_editor_absoluteX="80dp"
+                tools:layout_editor_absoluteY="596dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/ustatusPc1"
+                android:layout_width="161dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="center"
+                android:textColor="#ffff"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/ustatusPc2"
+                android:layout_width="161dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="center"
+                android:textColor="#ffff"
+                android:textSize="16sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/uspc3"
+                android:layout_width="195dp"
+                android:layout_height="142dp"
+                android:src="@drawable/pc3"
+                tools:layout_editor_absoluteX="80dp"
+                tools:layout_editor_absoluteY="596dp" />
+
+            <ImageView
+                android:id="@+id/uspc4"
+                android:layout_width="195dp"
+                android:layout_height="142dp"
+                android:src="@drawable/pc4"
+                tools:layout_editor_absoluteX="80dp"
+                tools:layout_editor_absoluteY="596dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/ustatusPc3"
+                android:layout_width="161dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="center"
+                android:textColor="#ffff"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/ustatusPc4"
+                android:layout_width="161dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="center"
+                android:textColor="#ffff"
+                android:textSize="16sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/uspc5"
+                android:layout_width="195dp"
+                android:layout_height="142dp"
+                android:src="@drawable/pc5"
+                tools:layout_editor_absoluteX="80dp"
+                tools:layout_editor_absoluteY="596dp" />
+
+            <ImageView
+                android:id="@+id/uspc6"
+                android:layout_width="195dp"
+                android:layout_height="142dp"
+                android:src="@drawable/pc6"
+                tools:layout_editor_absoluteX="80dp"
+                tools:layout_editor_absoluteY="596dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/ustatusPc5"
+                android:layout_width="161dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="center"
+                android:textColor="#ffff"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/ustatusPc6"
+                android:layout_width="161dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="center"
+                android:textColor="#ffff"
+                android:textSize="16sp" />
+        </TableRow>
+    </TableLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
