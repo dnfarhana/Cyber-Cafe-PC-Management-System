@@ -1,17 +1,18 @@
 package com.javacodegeeks.ccum;
 
 public class usage {
-    String matrix,pcid,pcname,dateset;
+    String matrix,pcid,pcname,dateset,key;
     double totamount;
     double tottime;
 
     public usage(){}
 
-    public usage(String matrix, String pcid, String pcname, String dateset, double totamount, double tottime) {
+    public usage(String matrix, String pcid, String pcname, String dateset, String key, double totamount, double tottime) {
         this.matrix = matrix;
         this.pcid = pcid;
         this.pcname = pcname;
         this.dateset = dateset;
+        this.key = key;
         this.totamount = totamount;
         this.tottime = tottime;
     }
@@ -64,6 +65,14 @@ public class usage {
         this.tottime = tottime;
     }
 
+    public String getKey() {
+        return key;
+    }
+
+    public void setKey(String key) {
+        this.key = key;
+    }
+
     @Override
     public String toString() {
         return "usage{" +
@@ -71,6 +80,7 @@ public class usage {
                 ", pcid='" + pcid + '\'' +
                 ", pcname='" + pcname + '\'' +
                 ", dateset='" + dateset + '\'' +
+                ", key='" + key + '\'' +
                 ", totamount=" + totamount +
                 ", tottime=" + tottime +
                 '}';

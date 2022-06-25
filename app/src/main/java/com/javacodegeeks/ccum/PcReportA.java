@@ -5,6 +5,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -44,35 +45,43 @@ public class PcReportA extends AppCompatActivity {
             @Override
             public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
                 usage obj = new usage();
+//                DataSnapshot ds  = new DataSnapshot();
+                String pckey = snapshot.getKey();
                 String matrix = snapshot.child("matrix_no").getValue(String.class);
                 String pcid = snapshot.child("pc_id").getValue(String.class);
                 String pcname = snapshot.child("pc_name").getValue(String.class);
                 Double amount = Double.parseDouble(snapshot.child("total_amount").getValue(String.class));
                 Double time = Double.parseDouble(snapshot.child("total_time").getValue(String.class));
                 String dateset = snapshot.child("date").getValue(String.class);
-                obj.setMatrix(matrix);
-                obj.setPcid(pcid);
-                obj.setPcname(pcname);
-                obj.setTotamount(amount);
-                obj.setTottime(time);
-                obj.setDateset(dateset);
-                pcl.add(obj);
+                    obj.setKey(pckey);
+                    obj.setMatrix(matrix);
+                    obj.setPcid(pcid);
+                    obj.setPcname(pcname);
+                    obj.setTotamount(amount);
+                    obj.setTottime(time);
+                    obj.setDateset(dateset);
+                    pcl.add(obj);
+//                }
 
                 CustomAdapterPcA customAdapterPcA = new CustomAdapterPcA(getApplicationContext(),pcl);
                 pcDisplay = (ListView)findViewById(R.id.displaypcusage);
                 pcDisplay.setAdapter(customAdapterPcA);
 
-//                pcDisplay.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//                    @Override
-//                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//                        for(int i=0;i<=pcl.size();i++){
-//                            if(position==i){
-//                                String
-//                            }
-//                        }
-//
-//                    }
-//                });
+                pcDisplay.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                        for(int i=0;i<=pcl.size();i++){
+                            if(position==i){
+                                usage pc = (usage)pcl.get(i);
+                                String pc_key = pc.getKey();
+                                Intent intent = new Intent(PcReportA.this, DisplayUsageC.class);
+                                intent.putExtra(Intent.EXTRA_TEXT, pc_key);
+                                startActivity(intent);
+                            }
+                        }
+
+                    }
+                });
             }
 
             @Override
