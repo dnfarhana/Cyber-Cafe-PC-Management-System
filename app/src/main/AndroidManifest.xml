@@ -14,7 +14,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CCUM">
-        <activity android:name=".ResetPcA"></activity>
+        <activity android:name=".DisplayDetailsA"></activity>
+        <activity android:name=".ResetPcA" />
         <activity android:name=".CustomAdapterSaleA" />
         <activity android:name=".SalesReportA" />
         <activity android:name=".CustomAdapterPcA" />

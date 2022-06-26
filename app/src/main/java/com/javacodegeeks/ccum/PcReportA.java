@@ -45,7 +45,6 @@ public class PcReportA extends AppCompatActivity {
             @Override
             public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
                 usage obj = new usage();
-//                DataSnapshot ds  = new DataSnapshot();
                 String pckey = snapshot.getKey();
                 String matrix = snapshot.child("matrix_no").getValue(String.class);
                 String pcid = snapshot.child("pc_id").getValue(String.class);
@@ -61,7 +60,6 @@ public class PcReportA extends AppCompatActivity {
                     obj.setTottime(time);
                     obj.setDateset(dateset);
                     pcl.add(obj);
-//                }
 
                 CustomAdapterPcA customAdapterPcA = new CustomAdapterPcA(getApplicationContext(),pcl);
                 pcDisplay = (ListView)findViewById(R.id.displaypcusage);
@@ -74,7 +72,7 @@ public class PcReportA extends AppCompatActivity {
                             if(position==i){
                                 usage pc = (usage)pcl.get(i);
                                 String pc_key = pc.getKey();
-                                Intent intent = new Intent(PcReportA.this, DisplayUsageC.class);
+                                Intent intent = new Intent(PcReportA.this, DisplayDetailsA.class);
                                 intent.putExtra(Intent.EXTRA_TEXT, pc_key);
                                 startActivity(intent);
                             }
