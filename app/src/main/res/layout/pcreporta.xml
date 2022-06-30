@@ -12,28 +12,28 @@
         android:layout_width="337dp"
         android:layout_height="60dp"
         android:fontFamily="@font/fugaz_one"
+        android:gravity="center"
         android:text="PC USAGE REPORT"
         android:textColor="#ffff"
         android:textIsSelectable="false"
         android:textSize="36sp"
         android:textStyle="bold|italic"
-        android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.083" />
+        app:layout_constraintVertical_bias="0.023" />
 
     <TableLayout
         android:id="@+id/tableLayout8"
-        android:layout_width="364dp"
-        android:layout_height="105dp"
+        android:layout_width="370dp"
+        android:layout_height="72dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintHorizontal_bias="0.487"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.185">
+        app:layout_constraintVertical_bias="0.204">
 
         <TableRow
             android:layout_width="match_parent"
@@ -88,13 +88,14 @@
 
     <ScrollView
         android:id="@+id/scrollView2"
-        android:layout_width="351dp"
-        android:layout_height="488dp"
+        android:layout_width="348dp"
+        android:layout_height="486dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.679">
+        app:layout_constraintVertical_bias="0.91">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -104,11 +105,26 @@
             <ListView
                 android:id="@+id/displaypcusage"
                 android:layout_width="match_parent"
-                android:layout_height="491dp"
+                android:layout_height="439dp"
                 android:background="@drawable/round"
                 tools:layout_editor_absoluteX="161dp"
                 tools:layout_editor_absoluteY="1dp" />
         </LinearLayout>
     </ScrollView>
+
+    <SearchView
+        android:id="@+id/searchdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:iconifiedByDefault="false"
+        android:queryHint="Search Date Here"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.111" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

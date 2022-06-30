@@ -10,7 +10,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.SearchView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
@@ -40,6 +42,8 @@ public class PcReportA extends AppCompatActivity {
         //hide actionbar
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
+
+        SearchView searchDate = (SearchView)findViewById(R.id.searchdate);
 
         databaseReference.child("pc_usage").addChildEventListener(new ChildEventListener() {
             @Override
@@ -127,6 +131,22 @@ public class PcReportA extends AppCompatActivity {
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
 
+            }
+        });
+        searchDate.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                if(pcDisplay.contains(query)){
+                    adapter.getFilter().filter(query);
+                }else{
+                    Toast.makeText(MainActivity.this, "No Match found",Toast.LENGTH_LONG).show();
+                }
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                return false;
             }
         });
     }
